@@ -14,11 +14,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
+        $this->call(HospitalSeeder::class);
+        $this->call(PatientSeeder::class);
+        
         User::create([
             'username' => 'admin',
-            'password' => Hash::make('password123'),
+            'password' => Hash::make('12345678'),
         ]);
     }
 }

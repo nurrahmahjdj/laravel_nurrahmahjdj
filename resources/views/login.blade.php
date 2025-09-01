@@ -13,26 +13,25 @@
 		<meta property="og:site_name" content="Sistem Rumah Sakit" />
 		<link rel="canonical" href="https://xx.com" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
-		<link href="{{ asset('assets/plugins/custom/fullcalendar/fullcalendar.bundle.css') }}" rel="stylesheet" type="text/css" />
-		<link href="{{ asset('assets/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
 		<link href="{{ asset('assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
 	</head>
-    <body>
+    <body class="bg-dark">
         <div class="container-sm">
             <div class="p-15">
-                <div class="d-flex justify-content-end">
+                <div class="d-flex justify-content-center">
                     <div class="card shadow p-10 w-50">
                         <form action="{{ route('login') }}" class="card-body" method="post">
+                            @csrf
                             <div class="text-center mb-20">
-                                <h1 class="mt-5">Selamat Datang Di Sistem Rumah Sakit</h1>
+                                <h1 class="mt-5">Selamat Datang Di Sistem Rumah Sakit 🙌🏻</h1>
                             </div>
                             <div class="form-group">
                                 <label for="username" class="form-label fw-bold">Username</label>
-                                <input type="text" name="username" class="form-control form-control-lg" placeholder="nurrahmahjdj" required/>
+                                <input type="text" name="username" class="form-control form-control-lg" placeholder="Masukkan Username" required/>
                             </div>
                             <div class="form-group my-5">
                                 <label for="password" class="form-label fw-bold">Kata Sandi</label>
-                                <input type="password" class="form-control form-control-lg" placeholder="Min. 8 Karakter" required/>
+                                <input type="password" name="password" class="form-control form-control-lg" placeholder="Masukkan Kata Sandi" required/>
                             </div>
                             <button type="submit" class="btn btn-lg btn-dark text-white mt-10 w-100">Masuk</button>
                         </form>
